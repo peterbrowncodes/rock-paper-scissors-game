@@ -38,10 +38,16 @@ function getHumanChoice() {
 console.log(getHumanChoice())
 
 function playRound(computerChoice, humanChoice) {
-    if (computerChoice == humanChoice) {
+    if (humanChoice.toLowerCase() == computerChoice.toLowerCase()) {
         let result = "It's a tie! No points awarded"
-    } else if (computerChoice == 'Rock' && humanChoice == 'Scissors') {
-        
-        return "Computer wins! 1 point to computer"
+    } else if ((humanChoice.toLowerCase() == 'rock' && computerChoice == 'Scissors') || (humanChoice.toLowerCase() == 'paper' && computerChoice == 'Rock') || (humanChoice.toLowerCase() == 'scissors' && computerChoice == 'Paper')) {
+        humanScore ++
+        console.log("You wins! 1 point to humans!")
+    } else {
+        computerScore ++
+        console.log("Computer wins! 1 point to computers!")
     }
 }
+
+console.log('Human score ' + humanScore)
+console.log('Computer score ' + computerScore)
