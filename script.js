@@ -23,7 +23,6 @@ function getComputerChoice() {
     const computerAnswer = `Computer picks ${computerChoice}.`
     return computerAnswer
 } 
-console.log(getComputerChoice())
 
 function getHumanChoice() {
     let humanChoice = prompt('Make your choice; rock, paper or scissors?');
@@ -35,8 +34,6 @@ function getHumanChoice() {
     return `You picked ${humanChoice}.`
 }
 
-console.log(getHumanChoice())
-
 function playRound(computerChoice, humanChoice) {
     if (humanChoice.toLowerCase() == computerChoice.toLowerCase()) {
         let result = "It's a tie! No points awarded"
@@ -47,7 +44,12 @@ function playRound(computerChoice, humanChoice) {
         computerScore ++
         console.log("Computer wins! 1 point to computers!")
     }
+
+    console.log('Human score ' + humanScore)
+    console.log('Computer score ' + computerScore)
 }
 
-console.log('Human score ' + humanScore)
-console.log('Computer score ' + computerScore)
+const humanSelection = getHumanChoice()
+const computerSelection = getComputerChoice()
+
+playRound(humanSelection, computerSelection)
