@@ -75,7 +75,10 @@ function playGame() {
 
     if (humanScore > computerScore) {
         console.log('Humans win!')
-    } else {
+    } else if (humanScore === computerScore) {
+        console.log('It\'s a tie! Humanity lives to play another day')
+    } 
+    else {
         console.log('Computers win! Humanity has fallen!')
     }
 }
