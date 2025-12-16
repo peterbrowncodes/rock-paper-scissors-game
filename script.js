@@ -25,7 +25,6 @@ const displayResult = document.getElementById("#result");
 const title = document.getElementById("#title");
 
 // EVENT LISTENERS
-    if (gameOn) {
     buttonRock.addEventListener("click", (e) => {
         humanChoice = getHumanChoice(buttonRock.value);
         playRound(humanChoice, getComputerChoice())
@@ -38,7 +37,6 @@ const title = document.getElementById("#title");
         humanChoice = getHumanChoice(buttonScissors.value);
         playRound(humanChoice, getComputerChoice())
     })    
-}
 
 
 // FUNCTIONS
